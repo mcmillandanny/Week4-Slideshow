@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Slideshow</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="dist/css/main.css">
+	</head>
+	<body>
+		<header>
+			<h1>Space The Final Frontier</h1>
+		</header>
+		<div class="wrapper">
+			<div class="slideshow slideshow1">
+				<img src="dist/img/kirk.jpeg" alt="groot image" class="slide active">
+				<img src="dist/img/picard.jpeg" alt="groot image" class="slide ">
+				<img src="dist/img/klingon.jpeg" alt="groot image" class="slide ">
+				<img src="dist/img/ana.jpeg" alt="groot image" class="slide ">
+			</div>
+			<div class="buttons">
+				<button class="prev">Previous</button>
+				<button class="stop">Stop</button>
+				<button class="start">Play</button>
+				<button class="next">Next</button>
+				</br>
+				<button class="jump0">Captain Kirk</button>
+				<button class="jump1">John Luke Picard</button>
+				<button class="jump2">Klingon boi</button>
+				<button class="jump3">Anakin Skywalker</button>
+			</div>	
+		</div>
+		<script src="dist/js/main.js"></script>
+
+		<script>
+			let mySlideshow1 = slideshow(5000, ".slideshow1")
+			
+			document.querySelector(".prev").onclick = function() {
+				mySlideshow1.prev()
+			}
+			document.querySelector(".stop").onclick = function() {
+				mySlideshow1.stop()
+			}
+			document.querySelector(".start").onclick = function() {
+				mySlideshow1.start()
+			}
+			document.querySelector(".next").onclick = function() {
+				mySlideshow1.next()
+			}
+			document.querySelector(".jump0").onclick = function() {
+				mySlideshow1.jump(0)
+			}
+			document.querySelector(".jump1").onclick = function() {
+				mySlideshow1.jump(1)
+			}
+			document.querySelector(".jump2").onclick = function() {
+				mySlideshow1.jump(2)
+			}
+			document.querySelector(".jump3").onclick = function() {
+				mySlideshow1.jump(3)
+			}
+		</script>
+
+	</body>
+</html>
